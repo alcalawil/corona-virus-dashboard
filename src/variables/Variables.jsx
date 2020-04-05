@@ -520,11 +520,12 @@ var dataSales = {
   ],
   series: [[287, 385, 490, 492, 554, 586, 698, 695]],
 };
-var optionsSales = {
+var optionsCurve = {
   low: 0,
-  high: 800,
+  // high: 5000,
   showArea: false,
   height: "245px",
+  scaleMinSpace: 20,
   axisX: {
     showGrid: true,
   },
@@ -535,8 +536,10 @@ var optionsSales = {
   chartPadding: {
     right: 50,
   },
+  onlyInteger: true,
+  referenceValue: 5,
 };
-var responsiveSales = [
+var responsiveCurve = [
   [
     "screen and (max-width: 640px)",
     {
@@ -548,9 +551,9 @@ var responsiveSales = [
     },
   ],
 ];
-var legendSales = {
-  names: ["Open", "Click", "Click Second Time"],
-  types: ["info", "danger", "warning"],
+var legendCurve = {
+  names: ["Casos", "Muertes"],
+  types: ["info", "danger"],
 };
 
 // Data for Bar Chart
@@ -575,9 +578,9 @@ var dataBar = {
   ],
 };
 var optionsBar = {
-  seriesBarDistance: 10,
+  seriesBarDistance: 15,
   axisX: {
-    showGrid: false,
+    showGrid: true,
   },
   height: "245px",
 };
@@ -595,7 +598,7 @@ var responsiveBar = [
   ],
 ];
 var legendBar = {
-  names: ["Tesla Model S", "BMW 5 Series"],
+  names: ["Casos", "Muertes"],
   types: ["info", "danger"],
 };
 
@@ -607,9 +610,9 @@ module.exports = {
   dataPie,
   legendPie,
   dataSales,
-  optionsSales,
-  responsiveSales,
-  legendSales,
+  optionsCurve,
+  responsiveCurve,
+  legendCurve,
   dataBar,
   optionsBar,
   responsiveBar,
