@@ -22,6 +22,7 @@
     "@types/googlemaps": "3.30.19",
     "@types/markerclustererplus": "2.1.33",
     "@types/react": "16.8.13",
+    "gh-pages": "^2.2.0",
     "typescript": "3.4.3"
   },
   "scripts": {
@@ -49,5 +50,8 @@
     ]
   },
   "homepage": "http://alcalawil.github.io/corona-virus-dashboard",
-  "author": {"name": "Wilfredo Alcala", "email": "alcalawilfre@gmail.com"}
+  "author": {
+    "name": "Wilfredo Alcala",
+    "email": "alcalawilfre@gmail.com"
+  }
 }
