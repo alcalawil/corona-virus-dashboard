@@ -1,0 +1,6 @@
+.ct-label.ct-horizontal.ct-end {
+  font-size: 10px !important;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  transform: translateY(-10%);
+}
