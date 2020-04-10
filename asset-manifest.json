@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/corona-virus-dashboard/static/css/main.fb76e71a.chunk.css",
-    "main.js": "/corona-virus-dashboard/static/js/main.d512e5a1.chunk.js",
-    "main.js.map": "/corona-virus-dashboard/static/js/main.d512e5a1.chunk.js.map",
-    "runtime-main.js": "/corona-virus-dashboard/static/js/runtime-main.dda8d0c7.js",
-    "runtime-main.js.map": "/corona-virus-dashboard/static/js/runtime-main.dda8d0c7.js.map",
-    "static/css/2.89f067aa.chunk.css": "/corona-virus-dashboard/static/css/2.89f067aa.chunk.css",
-    "static/js/2.b16e3570.chunk.js": "/corona-virus-dashboard/static/js/2.b16e3570.chunk.js",
-    "static/js/2.b16e3570.chunk.js.map": "/corona-virus-dashboard/static/js/2.b16e3570.chunk.js.map",
+    "main.css": "/corona-virus-dashboard/static/css/main.4955b56d.chunk.css",
+    "main.js": "/corona-virus-dashboard/static/js/main.7f5f1102.chunk.js",
+    "main.js.map": "/corona-virus-dashboard/static/js/main.7f5f1102.chunk.js.map",
+    "runtime~main.js": "/corona-virus-dashboard/static/js/runtime~main.82531749.js",
+    "runtime~main.js.map": "/corona-virus-dashboard/static/js/runtime~main.82531749.js.map",
+    "static/css/2.35e336bc.chunk.css": "/corona-virus-dashboard/static/css/2.35e336bc.chunk.css",
+    "static/js/2.52cd97e0.chunk.js": "/corona-virus-dashboard/static/js/2.52cd97e0.chunk.js",
+    "static/js/2.52cd97e0.chunk.js.map": "/corona-virus-dashboard/static/js/2.52cd97e0.chunk.js.map",
     "index.html": "/corona-virus-dashboard/index.html",
-    "precache-manifest.bdc0fa60018820162eec1053162c2e06.js": "/corona-virus-dashboard/precache-manifest.bdc0fa60018820162eec1053162c2e06.js",
+    "precache-manifest.fcbb448e596bbace5be6b9d1ca1a4348.js": "/corona-virus-dashboard/precache-manifest.fcbb448e596bbace5be6b9d1ca1a4348.js",
     "service-worker.js": "/corona-virus-dashboard/service-worker.js",
-    "static/css/2.89f067aa.chunk.css.map": "/corona-virus-dashboard/static/css/2.89f067aa.chunk.css.map",
-    "static/css/main.fb76e71a.chunk.css.map": "/corona-virus-dashboard/static/css/main.fb76e71a.chunk.css.map",
-    "static/js/2.b16e3570.chunk.js.LICENSE.txt": "/corona-virus-dashboard/static/js/2.b16e3570.chunk.js.LICENSE.txt"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.dda8d0c7.js",
-    "static/css/2.89f067aa.chunk.css",
-    "static/js/2.b16e3570.chunk.js",
-    "static/css/main.fb76e71a.chunk.css",
-    "static/js/main.d512e5a1.chunk.js"
-  ]
+    "static/css/2.35e336bc.chunk.css.map": "/corona-virus-dashboard/static/css/2.35e336bc.chunk.css.map",
+    "static/css/main.4955b56d.chunk.css.map": "/corona-virus-dashboard/static/css/main.4955b56d.chunk.css.map",
+    "static/media/pe-icon-7-stroke.css": "/corona-virus-dashboard/static/media/Pe-icon-7-stroke.c45f7de0.svg",
+    "static/media/face-3.jpg": "/corona-virus-dashboard/static/media/face-3.ce7a6b79.jpg",
+    "static/media/bootstrap.min.css": "/corona-virus-dashboard/static/media/glyphicons-halflings-regular.fa277232.woff",
+    "static/media/reactlogo.png": "/corona-virus-dashboard/static/media/reactlogo.9b864b36.png",
+    "static/media/sidebar-1.jpg": "/corona-virus-dashboard/static/media/sidebar-1.6be21e8a.jpg",
+    "static/media/sidebar-2.jpg": "/corona-virus-dashboard/static/media/sidebar-2.7a4ce7cc.jpg",
+    "static/media/sidebar-3.jpg": "/corona-virus-dashboard/static/media/sidebar-3.34535b95.jpg",
+    "static/media/sidebar-4.jpg": "/corona-virus-dashboard/static/media/sidebar-4.7bc259fd.jpg"
+  }
 }
