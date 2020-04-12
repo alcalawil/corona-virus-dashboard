@@ -1,26 +1,21 @@
 import React, { useEffect, useState } from "react";
-import ChartistGraph from "react-chartist";
 import { Grid, Row, Col } from "react-bootstrap";
-import { Card } from "components/Card/Card.jsx";
-import { Stats } from "components/Stats/Stats.jsx";
-import { Curve } from "components/Charts/Curve";
-import { Bar } from "components/Charts/Bar";
-import {
-  dataPie,
-  legendPie,
-  legendCurve,
-  dataBar,
-  optionsBar,
-  responsiveBar,
-  legendBar,
-} from "variables/Variables.jsx";
 import moment from "moment";
 import axios from "axios";
+// Components
+import { Stats } from "components/Stats/Stats";
+import { Curve } from "components/Charts/Curve";
+import { Bar } from "components/Charts/Bar";
+import { legendCurve, legendBar } from "variables/Variables";
+import DatePicker from "components/DatePicker/DatePicker";
+import { getDataBar, getDataCurve } from "../util";
 
-const Dashboard = (props) => {
+const Dashboard = () => {
   const [dailyStats, setDailyStats] = useState({});
+  // TODO: Default date today. Validate if there is data before rendering charts
   const defaultDate = moment().subtract(1, "day").format("YYYY-MM-DD");
   const [date, setDate] = useState(defaultDate);
+  const minDate = Object.keys(dailyStats)[0];
 
   const fetchData = async () => {
     try {
@@ -34,13 +29,13 @@ const Dashboard = (props) => {
     }
   };
 
+  const onDatePickerChange = (date) => {
+    setDate(date.format("YYYY-MM-DD"));
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
-
-  const onDateChange = (date) => {
-    setDate(date);
-  };
 
   const { total_infections, total_deaths, new_cases, new_deaths } =
     dailyStats[date] || {};
@@ -73,43 +68,16 @@ const Dashboard = (props) => {
           </Col>
         </Row>
       </Grid>
+      <DatePicker
+        onChange={onDatePickerChange}
+        minDate={minDate}
+        maxDate={defaultDate}
+      />
     </div>
   );
 };
 
 export default Dashboard;
-
-// TODO: Pasar esto a utils o algo así
-const getDataCurve = (dailyStats) => {
-  const dailyStatsAsEntries = Object.entries(dailyStats);
-  const dates = Object.keys(dailyStats);
-
-  const dataCurve = {
-    labels: dates.map((d) => moment(d).format("DD-MM")),
-    series: [dailyStatsAsEntries.map((c) => c[1].total_infections)],
-  };
-  return dataCurve;
-};
-
-const getDataBar = (dailyStats) => {
-  const numberOfBars = 10;
-  const dailyStatsAsEntries = Object.entries(dailyStats);
-  const dates = Object.keys(dailyStats);
-  const dataBar = {
-    labels: dates
-      .map((d) => moment(d).format("DD-MM"))
-      .slice(dates.length - numberOfBars),
-    series: [
-      dailyStatsAsEntries
-        .map((c) => c[1].new_cases)
-        .slice(dates.length - numberOfBars),
-      dailyStatsAsEntries
-        .map((c) => c[1].new_deaths)
-        .slice(dates.length - numberOfBars),
-    ],
-  };
-  return dataBar;
-};
 
 const createLegend = (json) => {
   var legend = [];
