@@ -1,25 +1,22 @@
 {
   "files": {
-    "main.css": "/corona-virus-dashboard/static/css/main.cee78107.chunk.css",
-    "main.js": "/corona-virus-dashboard/static/js/main.6864d8d6.chunk.js",
-    "main.js.map": "/corona-virus-dashboard/static/js/main.6864d8d6.chunk.js.map",
+    "main.css": "/corona-virus-dashboard/static/css/main.37d5af33.chunk.css",
+    "main.js": "/corona-virus-dashboard/static/js/main.887e9fb4.chunk.js",
+    "main.js.map": "/corona-virus-dashboard/static/js/main.887e9fb4.chunk.js.map",
     "runtime~main.js": "/corona-virus-dashboard/static/js/runtime~main.82531749.js",
     "runtime~main.js.map": "/corona-virus-dashboard/static/js/runtime~main.82531749.js.map",
     "static/css/2.35e336bc.chunk.css": "/corona-virus-dashboard/static/css/2.35e336bc.chunk.css",
-    "static/js/2.f41bb0a7.chunk.js": "/corona-virus-dashboard/static/js/2.f41bb0a7.chunk.js",
-    "static/js/2.f41bb0a7.chunk.js.map": "/corona-virus-dashboard/static/js/2.f41bb0a7.chunk.js.map",
+    "static/js/2.c8150c16.chunk.js": "/corona-virus-dashboard/static/js/2.c8150c16.chunk.js",
+    "static/js/2.c8150c16.chunk.js.map": "/corona-virus-dashboard/static/js/2.c8150c16.chunk.js.map",
     "index.html": "/corona-virus-dashboard/index.html",
-    "precache-manifest.831780ce3612dbaec3e35e246ab836fb.js": "/corona-virus-dashboard/precache-manifest.831780ce3612dbaec3e35e246ab836fb.js",
+    "precache-manifest.8d13ba86dc19dcae0c2a5d95385ca2b2.js": "/corona-virus-dashboard/precache-manifest.8d13ba86dc19dcae0c2a5d95385ca2b2.js",
     "service-worker.js": "/corona-virus-dashboard/service-worker.js",
     "static/css/2.35e336bc.chunk.css.map": "/corona-virus-dashboard/static/css/2.35e336bc.chunk.css.map",
-    "static/css/main.cee78107.chunk.css.map": "/corona-virus-dashboard/static/css/main.cee78107.chunk.css.map",
+    "static/css/main.37d5af33.chunk.css.map": "/corona-virus-dashboard/static/css/main.37d5af33.chunk.css.map",
     "static/media/pe-icon-7-stroke.css": "/corona-virus-dashboard/static/media/Pe-icon-7-stroke.c45f7de0.svg",
     "static/media/face-3.jpg": "/corona-virus-dashboard/static/media/face-3.ce7a6b79.jpg",
     "static/media/bootstrap.min.css": "/corona-virus-dashboard/static/media/glyphicons-halflings-regular.fa277232.woff",
     "static/media/reactlogo.png": "/corona-virus-dashboard/static/media/reactlogo.9b864b36.png",
-    "static/media/sidebar-1.jpg": "/corona-virus-dashboard/static/media/sidebar-1.6be21e8a.jpg",
-    "static/media/sidebar-2.jpg": "/corona-virus-dashboard/static/media/sidebar-2.7a4ce7cc.jpg",
-    "static/media/sidebar-3.jpg": "/corona-virus-dashboard/static/media/sidebar-3.34535b95.jpg",
-    "static/media/sidebar-4.jpg": "/corona-virus-dashboard/static/media/sidebar-4.7bc259fd.jpg"
+    "static/media/sidebar-3.jpg": "/corona-virus-dashboard/static/media/sidebar-3.34535b95.jpg"
   }
 }

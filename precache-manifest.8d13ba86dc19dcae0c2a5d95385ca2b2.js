@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a16bd9e69ddfb954a9cf0dd54a17a036",
+    "revision": "53d57f4c76beaf36defa30a14fefff15",
     "url": "/corona-virus-dashboard/index.html"
   },
   {
-    "revision": "d3309b3911e451c430c4",
+    "revision": "e46e88db4d76d0f9ebc5",
     "url": "/corona-virus-dashboard/static/css/2.35e336bc.chunk.css"
   },
   {
-    "revision": "b3a320f526d84b9d0a1d",
-    "url": "/corona-virus-dashboard/static/css/main.cee78107.chunk.css"
+    "revision": "ecbe00c09e19368cd7c1",
+    "url": "/corona-virus-dashboard/static/css/main.37d5af33.chunk.css"
   },
   {
-    "revision": "d3309b3911e451c430c4",
-    "url": "/corona-virus-dashboard/static/js/2.f41bb0a7.chunk.js"
+    "revision": "e46e88db4d76d0f9ebc5",
+    "url": "/corona-virus-dashboard/static/js/2.c8150c16.chunk.js"
   },
   {
-    "revision": "b3a320f526d84b9d0a1d",
-    "url": "/corona-virus-dashboard/static/js/main.6864d8d6.chunk.js"
+    "revision": "ecbe00c09e19368cd7c1",
+    "url": "/corona-virus-dashboard/static/js/main.887e9fb4.chunk.js"
   },
   {
     "revision": "bd230c3e7773fa4e4094",
@@ -68,19 +68,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/corona-virus-dashboard/static/media/reactlogo.9b864b36.png"
   },
   {
-    "revision": "6be21e8a1b7d63048728851c6003e189",
-    "url": "/corona-virus-dashboard/static/media/sidebar-1.6be21e8a.jpg"
-  },
-  {
-    "revision": "7a4ce7cc040fc1cb8176cde106e9232f",
-    "url": "/corona-virus-dashboard/static/media/sidebar-2.7a4ce7cc.jpg"
-  },
-  {
     "revision": "34535b958ad0f0183770a8731b31b4ca",
     "url": "/corona-virus-dashboard/static/media/sidebar-3.34535b95.jpg"
-  },
-  {
-    "revision": "7bc259fd5cef15e95376c822c7e23081",
-    "url": "/corona-virus-dashboard/static/media/sidebar-4.7bc259fd.jpg"
   }
 ]);
