@@ -10,12 +10,16 @@ import { legendCurve, legendBar } from "variables/Variables";
 import DatePicker from "components/DatePicker/DatePicker";
 import { getDataBar, getDataCurve } from "../util";
 
+const DATE_FORMAT = "YYYY-MM-DD";
+
 const Dashboard = () => {
   const [dailyStats, setDailyStats] = useState({});
-  // TODO: Default date today. Validate if there is data before rendering charts
-  const defaultDate = moment().subtract(1, "day").format("YYYY-MM-DD");
-  const [date, setDate] = useState(defaultDate);
-  const minDate = Object.keys(dailyStats)[0];
+
+  const minDate = "2020-03-03";
+  const maxDate = moment().format(DATE_FORMAT); // TODO: improve this
+  const [date, setDate] = useState(
+    moment().subtract(1, "day").format(DATE_FORMAT)
+  );
 
   const fetchData = async () => {
     try {
@@ -30,7 +34,7 @@ const Dashboard = () => {
   };
 
   const onDatePickerChange = (date) => {
-    setDate(date.format("YYYY-MM-DD"));
+    setDate(date.format(DATE_FORMAT));
   };
 
   useEffect(() => {
@@ -71,7 +75,8 @@ const Dashboard = () => {
       <DatePicker
         onChange={onDatePickerChange}
         minDate={minDate}
-        maxDate={defaultDate}
+        maxDate={maxDate}
+        defaultDate={date}
       />
     </div>
   );

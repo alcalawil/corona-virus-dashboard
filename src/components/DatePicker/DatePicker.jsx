@@ -11,8 +11,8 @@ import moment from "moment";
 moment.locale("es");
 const locale = "es";
 
-const DatePicker = ({ onChange, minDate, maxDate }) => {
-  const [date, setDate] = useState(maxDate);
+const DatePicker = ({ onChange, minDate, maxDate, defaultDate }) => {
+  const [date, setDate] = useState(defaultDate);
   const [classes, setClasses] = useState("dropdown");
 
   const handleChange = (date) => {
@@ -44,7 +44,7 @@ const DatePicker = ({ onChange, minDate, maxDate }) => {
                 variant="static"
                 openTo="date"
                 value={date}
-                defaultValue={maxDate}
+                defaultValue={defaultDate}
                 onChange={handleChange}
                 locale={locale}
                 minDate={minDate}
