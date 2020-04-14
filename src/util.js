@@ -12,7 +12,7 @@ export const getDataCurve = (dailyStats) => {
 };
 
 export const getDataBar = (dailyStats) => {
-  const numberOfBars = 10;
+  const numberOfBars = 30;
   const dailyStatsAsEntries = Object.entries(dailyStats);
   const dates = Object.keys(dailyStats);
   const dataBar = {
@@ -23,9 +23,9 @@ export const getDataBar = (dailyStats) => {
       dailyStatsAsEntries
         .map((c) => c[1].new_cases)
         .slice(dates.length - numberOfBars),
-      dailyStatsAsEntries
-        .map((c) => c[1].new_deaths)
-        .slice(dates.length - numberOfBars),
+      // dailyStatsAsEntries
+      //   .map((c) => c[1].new_deaths)
+      //   .slice(dates.length - numberOfBars),
     ],
   };
   return dataBar;

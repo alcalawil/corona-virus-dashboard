@@ -9,6 +9,8 @@ import { Bar } from "components/Charts/Bar";
 import { legendCurve, legendBar } from "variables/Variables";
 import DatePicker from "components/DatePicker/DatePicker";
 import { getDataBar, getDataCurve } from "../util";
+import HBar from "components/Charts/HBar";
+const { getHBarData } = require("../util/formatChartData");
 
 const DATE_FORMAT = "YYYY-MM-DD";
 
@@ -46,20 +48,24 @@ const Dashboard = () => {
 
   const dataCurve = getDataCurve(dailyStats);
   const dataBar = getDataBar(dailyStats);
+  const dataHbar = getHBarData(dailyStats[date]);
 
   return (
     <div className="content">
       <Grid fluid>
         <Row>
-          <Stats
-            total_infections={total_infections}
-            total_deaths={total_deaths}
-            new_cases={new_cases}
-            new_deaths={new_deaths}
-            date={date}
-          />
+          {dailyStats[date] ? (
+            <Stats
+              total_infections={total_infections}
+              total_deaths={total_deaths}
+              new_cases={new_cases}
+              new_deaths={new_deaths}
+              date={date}
+            />
+          ) : (
+            <h4>Lo sentimos. Esta data aún no está disponoble</h4>
+          )}
         </Row>
-
         {/* Charts */}
         <Row>
           <Col md={9}>
@@ -69,6 +75,15 @@ const Dashboard = () => {
         <Row>
           <Col md={9}>
             <Bar legend={createLegend(legendBar)} data={dataBar} />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={9}>
+            {dataHbar.data.length ? (
+              <HBar data={dataHbar.data} labels={dataHbar.labels} />
+            ) : (
+              <h4>Data no disponible</h4>
+            )}
           </Col>
         </Row>
       </Grid>
