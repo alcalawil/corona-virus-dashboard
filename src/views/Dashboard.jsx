@@ -10,7 +10,8 @@ import { legendCurve, legendBar } from "variables/Variables";
 import DatePicker from "components/DatePicker/DatePicker";
 import { getDataBar, getDataCurve } from "../util";
 import HBar from "components/Charts/HBar";
-const { getHBarData } = require("../util/formatChartData");
+import VBar from "components/Charts/VBar";
+import { getHBarData, formatVBarData } from "../util/formatChartData";
 
 const DATE_FORMAT = "YYYY-MM-DD";
 
@@ -49,6 +50,7 @@ const Dashboard = () => {
   const dataCurve = getDataCurve(dailyStats);
   const dataBar = getDataBar(dailyStats);
   const dataHbar = getHBarData(dailyStats[date]);
+  const dataVBar = formatVBarData(dailyStats);
 
   return (
     <div className="content">
@@ -74,13 +76,22 @@ const Dashboard = () => {
         </Row>
         <Row>
           <Col md={9}>
-            <Bar legend={createLegend(legendBar)} data={dataBar} />
+            {/* <Bar legend={createLegend(legendBar)} data={dataBar} /> */}
           </Col>
         </Row>
         <Row>
           <Col md={9}>
             {dataHbar.data.length ? (
               <HBar data={dataHbar.data} labels={dataHbar.labels} />
+            ) : (
+              <h4>Data no disponible</h4>
+            )}
+          </Col>
+        </Row>
+        <Row>
+          <Col md={9}>
+            {dataHbar.data.length ? (
+              <VBar labels={dataVBar.labels} series={dataVBar.series} />
             ) : (
               <h4>Data no disponible</h4>
             )}

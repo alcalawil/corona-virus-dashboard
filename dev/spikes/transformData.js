@@ -28,4 +28,24 @@ const getHBarData = (dataToday = _dataToday, order = "desc") => {
   };
 };
 
-console.log(getHBarData());
+// console.log(getHBarData());
+
+const formatVBarData = (dailyStats, numberOfBars = 14) => {
+  const newCases = _(dailyStats)
+    .map("new_cases")
+    .takeRight(numberOfBars)
+    .value();
+  const newDeaths = _(dailyStats)
+    .map("new_deaths")
+    .takeRight(numberOfBars)
+    .value();
+  const dates = _(Object.keys(dailyStats)).takeRight(numberOfBars).value();
+
+  return {
+    newCases,
+    newDeaths,
+    dates,
+  };
+};
+
+console.log(formatVBarData(_data));

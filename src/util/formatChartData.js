@@ -27,3 +27,23 @@ export const getHBarData = (dataToday, order = "desc") => {
     data: orderedArray.map(({ cases }) => cases),
   };
 };
+
+export const formatVBarData = (dailyStats, numberOfBars = 14) => {
+  const newCases = _(dailyStats)
+    .map("new_cases")
+    .takeRight(numberOfBars)
+    .value();
+  const newDeaths = _(dailyStats)
+    .map("new_deaths")
+    .takeRight(numberOfBars)
+    .value();
+  const dates = _(Object.keys(dailyStats)).takeRight(numberOfBars).value();
+
+  return {
+    labels: dates,
+    series: {
+      newCases,
+      newDeaths,
+    },
+  };
+};

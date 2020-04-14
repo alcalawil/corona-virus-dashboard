@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card } from "components/Card/Card.jsx";
 import ApexChart from "react-apexcharts";
-import { hBarOptions, provincias } from "variables/Variables.jsx";
+import { hBarOptions } from "variables/chartOptions";
 
 const HBar = ({ labels, data }) => {
   const series = [
