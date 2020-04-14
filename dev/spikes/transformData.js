@@ -48,4 +48,16 @@ const formatVBarData = (dailyStats, numberOfBars = 14) => {
   };
 };
 
-console.log(formatVBarData(_data));
+// console.log(formatVBarData(_data));
+
+const formatLineData = (dailyStats, numberOfBars = 14) => {
+  const totalCases = _(dailyStats).map("total_infections").value();
+  const dates = _(Object.keys(dailyStats)).value();
+
+  return {
+    labels: dates,
+    data: totalCases,
+  };
+};
+
+console.log(formatLineData(_data));

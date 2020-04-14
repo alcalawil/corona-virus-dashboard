@@ -47,3 +47,13 @@ export const formatVBarData = (dailyStats, numberOfBars = 14) => {
     },
   };
 };
+
+export const formatLineData = (dailyStats) => {
+  const totalCases = _(dailyStats).map("total_infections").value();
+  const dates = _(Object.keys(dailyStats)).value();
+
+  return {
+    labels: dates,
+    data: totalCases,
+  };
+};

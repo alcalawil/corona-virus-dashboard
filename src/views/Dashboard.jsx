@@ -11,7 +11,12 @@ import DatePicker from "components/DatePicker/DatePicker";
 import { getDataBar, getDataCurve } from "../util";
 import HBar from "components/Charts/HBar";
 import VBar from "components/Charts/VBar";
-import { getHBarData, formatVBarData } from "../util/formatChartData";
+import LineChart from "components/Charts/Line";
+import {
+  getHBarData,
+  formatVBarData,
+  formatLineData,
+} from "../util/formatChartData";
 
 const DATE_FORMAT = "YYYY-MM-DD";
 
@@ -51,6 +56,7 @@ const Dashboard = () => {
   const dataBar = getDataBar(dailyStats);
   const dataHbar = getHBarData(dailyStats[date]);
   const dataVBar = formatVBarData(dailyStats);
+  const lineData = formatLineData(dailyStats);
 
   return (
     <div className="content">
@@ -71,7 +77,11 @@ const Dashboard = () => {
         {/* Charts */}
         <Row>
           <Col md={9}>
-            <Curve legend={createLegend(legendCurve)} data={dataCurve} />
+            {dataHbar.data.length ? (
+              <LineChart labels={lineData.labels} data={lineData.data} />
+            ) : (
+              <h4>Data no disponible</h4>
+            )}
           </Col>
         </Row>
         <Row>
