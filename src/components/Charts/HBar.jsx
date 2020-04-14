@@ -4,11 +4,12 @@ import ApexChart from "react-apexcharts";
 import { hBarOptions, provincias } from "variables/Variables.jsx";
 
 const HBar = ({ labels, data }) => {
-  const [series, setSeries] = useState([
+  const series = [
     {
       data,
     },
-  ]);
+  ];
+
   const options = {
     ...hBarOptions,
     xaxis: { categories: labels },
