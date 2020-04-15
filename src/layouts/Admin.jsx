@@ -40,8 +40,7 @@ const Admin = (props) => {
   const getRandomMessage = () => {
     return (
       <div>
-        <b>"Solo son dos semanas de cuarenten"</b>
-        Alberto Fernandez
+        <b>"Solo serán dos semanas de cuarentena"</b> Alberto Fernandez
       </div>
     );
   };

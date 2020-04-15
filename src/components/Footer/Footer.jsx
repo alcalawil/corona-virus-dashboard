@@ -12,7 +12,9 @@ class Footer extends Component {
                 <a href="#">Inicio</a>
               </li>
               <li>
-                <a href="https://github.com/alcalawil">Portfolio</a>
+                <a href="https://github.com/alcalawil" target="_blank">
+                  Portfolio
+                </a>
               </li>
             </ul>
           </nav>
