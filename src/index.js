@@ -17,6 +17,7 @@
 */
 import React from "react";
 import ReactDOM from "react-dom";
+import * as serviceWorker from "./serviceWorker";
 
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
@@ -38,3 +39,5 @@ ReactDOM.render(
   </BrowserRouter>,
   document.getElementById("root")
 );
+
+serviceWorker.unregister();
