@@ -26,18 +26,18 @@ import Upgrade from "views/Upgrade.jsx";
 
 const dashboardRoutes = [
   {
-    path: "/dashboard",
+    path: "/",
     name: "Argentina",
     icon: "pe-7s-graph",
     component: Dashboard,
-    layout: "/admin",
+    layout: "",
   },
   // {
   //   path: "/user",
   //   name: "User Profile",
   //   icon: "pe-7s-user",
   //   component: UserProfile,
-  //   layout: "/admin",
+  //   layout: "",
   // },
   // {
   //   path: "/table",

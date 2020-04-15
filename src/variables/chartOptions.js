@@ -266,16 +266,16 @@ export const lineOptions = {
       //     text: "Point Annotation",
       //   },
       // },
-      // {
-      //   x: new Date("30 Mar 2020").getTime(),
-      //   y: 1054,
-      //   marker: {
-      //     size: 0,
-      //   },
-      //   image: {
-      //     path: "../assets/img/ico-instagram.png", // TODO: Cara de fernandez
-      //   },
-      // },
+      {
+        x: new Date("30 Mar 2020").getTime(),
+        y: 1054,
+        marker: {
+          size: 0,
+        },
+        image: {
+          path: "https://i.imgur.com/ts1dEWb.png", // TODO: Cara de fernandez
+        },
+      },
     ],
   },
   dataLabels: {

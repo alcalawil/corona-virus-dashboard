@@ -16,7 +16,7 @@ const Admin = (props) => {
   useEffect(() => {
     setNotificationSystem(notificationRef);
     var _notificationSystem = notificationRef.current;
-    const level = "warning";
+    const level = "info";
     _notificationSystem.addNotification({
       title: <span data-notify="icon" className="pe-7s-gift" />,
       message: getRandomMessage(),
@@ -47,22 +47,15 @@ const Admin = (props) => {
 
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
-        return (
-          <Route
-            path={prop.layout + prop.path}
-            render={(props) => (
-              <prop.component
-                {...props}
-                handleClick={handleNotificationClick}
-              />
-            )}
-            key={key}
-          />
-        );
-      } else {
-        return null;
-      }
+      return (
+        <Route
+          path={prop.path}
+          render={(props) => (
+            <prop.component {...props} handleClick={handleNotificationClick} />
+          )}
+          key={key}
+        />
+      );
     });
   };
 
@@ -77,18 +70,6 @@ const Admin = (props) => {
     }
     return "Brand";
   };
-  // const componentDidMount = () => {
-  //   this.setState({ _notificationSystem: this.refs.notificationSystem });
-  //   var _notificationSystem = this.refs.notificationSystem;
-  //   const level = "warning";
-  //   _notificationSystem.addNotification({
-  //     title: <span data-notify="icon" className="pe-7s-gift" />,
-  //     message: this.getRandomMessage(),
-  //     level: level,
-  //     position: "tl",
-  //     autoDismiss: 5,
-  //   });
-  // }
 
   // const componentDidUpdate = (e) => {
   //   if (
