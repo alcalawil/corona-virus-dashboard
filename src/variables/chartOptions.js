@@ -1,5 +1,4 @@
 const es = require("./locale_es");
-const { series } = require("../data/stock-prices");
 
 export const provincias = [
   "caba",
